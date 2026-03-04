@@ -8,9 +8,9 @@ app = Flask(__name__)
 # ══════════════════════════════════════════════════════════
 # CONFIGURACIÓN  ← edita solo esta sección
 # ══════════════════════════════════════════════════════════
-GMAIL_REMITENTE     = "c.estrada712017@gmail.com"        # Tu Gmail remitente
-GMAIL_PASSWORD      = "mfdi nizt azlq jeng"       # Contraseña de APP de Gmail (16 chars)
-CORREO_DESPACHADORA = "limpiezabrillux@gmail.com"    # Destinatario del pedido
+GMAIL_REMITENTE     = "potinesdomiclios@gmail.com"       # Tu Gmail remitente
+GMAIL_PASSWORD      = "cssh uvlx jgrc daki"             # Contraseña de APP de Gmail (16 chars)
+CORREO_DESPACHADORA = "potinesdomiclios@gmail.com"       # Destinatario del pedido
 COSTO_DOMICILIO     = 4500
 # ══════════════════════════════════════════════════════════
 
@@ -27,9 +27,9 @@ COMBO_NAMES  = {
     "familiar": "COMBO 3 (Bombón + Papas + Salchicha + Huevo)",
     "papas":    "COMBO 4 (Papas + Salchicha + Huevo)"
 }
-SAUCE_NAMES  = {"casa":"Salsa de la Casa","enacorradora":"Salsa Enacorradora","rosada":"Salsa Rosada","sin_salsa":"Sin salsa"}
-SODA_NAMES   = {"cocacola":"Coca-Cola","sprite":"Sprite","quatro":"Quatro","agua":"Agua"}
-SODA_PRICES  = {"cocacola":3000,"sprite":3000,"quatro":3000,"agua":3000}
+SAUCE_NAMES  = {"rosada":"Salsa Rosada","enacorradora":"Salsa Encacorradora","bbq":"Salsa BBQ","pina":"Salsa de Piña","sin_salsa":"Sin salsa"}
+SODA_NAMES   = {"cocacola":"Coca-Cola","quatro":"Cuatro","aguamanzana":"Agua de Manzana","aguamaracuya":"Agua de Maracuyá","delvalle":"Del Valle"}
+SODA_PRICES  = {"cocacola":3000,"quatro":3000,"aguamanzana":3000,"aguamaracuya":3000,"delvalle":3000}
 COMBO_PRICES = {"clasico":16000,"mega":15000,"familiar":14000,"papas":10000}
 
 @app.route('/')

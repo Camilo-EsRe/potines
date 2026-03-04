@@ -153,7 +153,7 @@
   <header class="sticky top-0 z-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 px-4 py-4 shadow-lg">
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="bg-red-600 rounded-xl p-2 shadow-md"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="3" fill="#FEF3C7"/><rect x="6" y="4" width="4" height="12" rx="2" fill="#FBBF24"/><rect x="11" y="2" width="4" height="14" rx="2" fill="#F59E0B"/><rect x="16" y="5" width="4" height="11" rx="2" fill="#FBBF24"/><rect x="21" y="3" width="4" height="13" rx="2" fill="#F59E0B"/></svg></div>
+                <div class="bg-red-600 rounded-xl p-1 shadow-md overflow-hidden" style="width:44px;height:44px;"><img src="{{ url_for('static', filename='logo.png') }}" alt="Potines" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;"></div>
         <span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span>
       </div>
       <div class="bg-white/80 backdrop-blur rounded-full px-3 py-1 shadow"><span class="text-red-600 font-semibold text-sm">Paso 1/6</span></div>
@@ -268,7 +268,7 @@
   <header class="sticky top-0 z-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 px-4 py-4 shadow-lg">
     <div class="flex items-center justify-between">
       <button id="btn-back-p2" class="bg-white/80 rounded-full p-2 shadow flex items-center gap-1 text-red-700 font-semibold text-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Volver</button>
-      <div class="flex items-center gap-2"><div class="bg-red-600 rounded-xl p-2 shadow-md"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="3" fill="#FEF3C7"/><rect x="6" y="4" width="4" height="12" rx="2" fill="#FBBF24"/><rect x="11" y="2" width="4" height="14" rx="2" fill="#F59E0B"/><rect x="16" y="5" width="4" height="11" rx="2" fill="#FBBF24"/><rect x="21" y="3" width="4" height="13" rx="2" fill="#F59E0B"/></svg></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
+      <div class="flex items-center gap-2"><div class="bg-amber-400 rounded-xl overflow-hidden shadow-md" style="width:44px;height:44px;"><img src="{{ url_for('static', filename='logo.png') }}" alt="Potines" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;"></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
       <div class="bg-white/80 backdrop-blur rounded-full px-3 py-1 shadow"><span class="text-red-600 font-semibold text-sm">Paso 2/6</span></div>
     </div>
   </header>
@@ -308,7 +308,7 @@
   <header class="sticky top-0 z-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 px-4 py-4 shadow-lg">
     <div class="flex items-center justify-between">
       <button id="btn-back-p3" class="bg-white/80 rounded-full p-2 shadow flex items-center gap-1 text-red-700 font-semibold text-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Volver</button>
-      <div class="flex items-center gap-2"><div class="bg-red-600 rounded-xl p-2 shadow-md"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="3" fill="#FEF3C7"/><rect x="6" y="4" width="4" height="12" rx="2" fill="#FBBF24"/><rect x="11" y="2" width="4" height="14" rx="2" fill="#F59E0B"/><rect x="16" y="5" width="4" height="11" rx="2" fill="#FBBF24"/><rect x="21" y="3" width="4" height="13" rx="2" fill="#F59E0B"/></svg></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
+      <div class="flex items-center gap-2"><div class="bg-amber-400 rounded-xl overflow-hidden shadow-md" style="width:44px;height:44px;"><img src="{{ url_for('static', filename='logo.png') }}" alt="Potines" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;"></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
       <div class="bg-white/80 backdrop-blur rounded-full px-3 py-1 shadow"><span class="text-red-600 font-semibold text-sm">Paso 3/6</span></div>
     </div>
   </header>
@@ -353,33 +353,14 @@
       </div>
     </div>
 
-    <div class="soda-card combo-card-bg rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden">
-      <div class="bg-gradient-to-r from-green-500 to-emerald-500 px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow overflow-hidden">
-            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="spriteG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#15803D"/><stop offset="50%" stop-color="#4ADE80"/><stop offset="100%" stop-color="#15803D"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#spriteG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#166534"/><rect x="13" y="30" width="14" height="20" rx="2" fill="#fff"/><text x="20" y="43" text-anchor="middle" fill="#16A34A" font-size="5" font-weight="bold">SPRITE</text><ellipse cx="17" cy="55" rx="2" ry="8" fill="rgba(255,255,255,0.3)"/></svg>
-          </div>
-          <div><h3 class="text-white font-bold text-base">Sprite</h3><p class="text-green-100 text-xs">250 ml • Lima-Limón 🍋</p></div>
-        </div>
-        <span class="text-white font-bold text-lg">$3.000</span>
-      </div>
-      <div class="p-4 flex items-center justify-between">
-        <p class="text-xs text-gray-500">Refrescante y burbujeante</p>
-        <div class="flex items-center gap-2 bg-gray-100 rounded-full p-1">
-          <button class="soda-qty-btn w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-red-600 font-bold text-xl" onclick="updateSodaQty('sprite',-1)">−</button>
-          <span id="qty-sprite" class="w-8 text-center font-bold text-gray-800">0</span>
-          <button class="soda-qty-btn w-9 h-9 bg-red-600 rounded-full shadow-md flex items-center justify-center text-white font-bold text-xl" onclick="updateSodaQty('sprite',1)">+</button>
-        </div>
-      </div>
-    </div>
-
+    <!-- Cuatro -->
     <div class="soda-card combo-card-bg rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden">
       <div class="bg-gradient-to-r from-green-500 to-lime-400 px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow overflow-hidden">
-            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="quatroG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#15803D"/><stop offset="50%" stop-color="#22C55E"/><stop offset="100%" stop-color="#15803D"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#quatroG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#166534"/><rect x="13" y="30" width="14" height="20" rx="2" fill="#fff"/><text x="20" y="43" text-anchor="middle" fill="#16A34A" font-size="5" font-weight="bold">QUATRO</text><ellipse cx="17" cy="55" rx="2" ry="8" fill="rgba(255,255,255,0.3)"/><circle cx="20" cy="62" r="4" fill="#BEF264" opacity="0.4"/></svg>
+            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="quatroG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#15803D"/><stop offset="50%" stop-color="#22C55E"/><stop offset="100%" stop-color="#15803D"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#quatroG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#166534"/><rect x="13" y="30" width="14" height="20" rx="2" fill="#fff"/><text x="20" y="43" text-anchor="middle" fill="#16A34A" font-size="5" font-weight="bold">CUATRO</text><ellipse cx="17" cy="55" rx="2" ry="8" fill="rgba(255,255,255,0.3)"/></svg>
           </div>
-          <div><h3 class="text-white font-bold text-base">Quatro</h3><p class="text-green-100 text-xs">250 ml • Lima-Limón 🍋</p></div>
+          <div><h3 class="text-white font-bold text-base">Cuatro</h3><p class="text-green-100 text-xs">250 ml • Lima-Limón 🍋</p></div>
         </div>
         <span class="text-white font-bold text-lg">$3.000</span>
       </div>
@@ -393,22 +374,65 @@
       </div>
     </div>
 
+    <!-- Agua de Manzana -->
     <div class="soda-card combo-card-bg rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden">
-      <div class="bg-gradient-to-r from-blue-400 to-cyan-400 px-4 py-3 flex items-center justify-between">
+      <div class="bg-gradient-to-r from-green-400 to-emerald-300 px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow overflow-hidden">
-            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="aguaG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0EA5E9"/><stop offset="50%" stop-color="#BAE6FD"/><stop offset="100%" stop-color="#0EA5E9"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#aguaG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#0284C7"/><rect x="13" y="30" width="14" height="20" rx="2" fill="#fff"/><text x="20" y="43" text-anchor="middle" fill="#0284C7" font-size="5" font-weight="bold">AGUA</text><ellipse cx="17" cy="55" rx="2" ry="8" fill="rgba(255,255,255,0.4)"/></svg>
+            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="manzanaG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#16A34A"/><stop offset="50%" stop-color="#86EFAC"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#manzanaG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#15803D"/><rect x="13" y="28" width="14" height="22" rx="2" fill="#fff"/><text x="20" y="38" text-anchor="middle" fill="#16A34A" font-size="4.5" font-weight="bold">AGUA</text><text x="20" y="44" text-anchor="middle" fill="#16A34A" font-size="4" font-weight="bold">MANZANA</text><ellipse cx="17" cy="57" rx="2" ry="8" fill="rgba(255,255,255,0.4)"/></svg>
           </div>
-          <div><h3 class="text-white font-bold text-base">Agua</h3><p class="text-blue-100 text-xs">250 ml • Natural 💧</p></div>
+          <div><h3 class="text-white font-bold text-base">Agua de Manzana</h3><p class="text-green-100 text-xs">250 ml • Manzana 🍏</p></div>
         </div>
         <span class="text-white font-bold text-lg">$3.000</span>
       </div>
       <div class="p-4 flex items-center justify-between">
-        <p class="text-xs text-gray-500">Pura y refrescante</p>
+        <p class="text-xs text-gray-500">Dulce y refrescante</p>
         <div class="flex items-center gap-2 bg-gray-100 rounded-full p-1">
-          <button class="soda-qty-btn w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-red-600 font-bold text-xl" onclick="updateSodaQty('agua',-1)">−</button>
-          <span id="qty-agua" class="w-8 text-center font-bold text-gray-800">0</span>
-          <button class="soda-qty-btn w-9 h-9 bg-red-600 rounded-full shadow-md flex items-center justify-center text-white font-bold text-xl" onclick="updateSodaQty('agua',1)">+</button>
+          <button class="soda-qty-btn w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-red-600 font-bold text-xl" onclick="updateSodaQty('aguamanzana',-1)">−</button>
+          <span id="qty-aguamanzana" class="w-8 text-center font-bold text-gray-800">0</span>
+          <button class="soda-qty-btn w-9 h-9 bg-red-600 rounded-full shadow-md flex items-center justify-center text-white font-bold text-xl" onclick="updateSodaQty('aguamanzana',1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agua de Maracuyá -->
+    <div class="soda-card combo-card-bg rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden">
+      <div class="bg-gradient-to-r from-yellow-400 to-orange-400 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow overflow-hidden">
+            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="maracuyaG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D97706"/><stop offset="50%" stop-color="#FDE68A"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#maracuyaG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#B45309"/><rect x="13" y="28" width="14" height="22" rx="2" fill="#fff"/><text x="20" y="38" text-anchor="middle" fill="#D97706" font-size="4.5" font-weight="bold">AGUA</text><text x="20" y="44" text-anchor="middle" fill="#D97706" font-size="3.8" font-weight="bold">MARACUYÁ</text><ellipse cx="17" cy="57" rx="2" ry="8" fill="rgba(255,255,255,0.4)"/></svg>
+          </div>
+          <div><h3 class="text-white font-bold text-base">Agua de Maracuyá</h3><p class="text-yellow-100 text-xs">250 ml • Tropical 🌴</p></div>
+        </div>
+        <span class="text-white font-bold text-lg">$3.000</span>
+      </div>
+      <div class="p-4 flex items-center justify-between">
+        <p class="text-xs text-gray-500">Tropical y exótica</p>
+        <div class="flex items-center gap-2 bg-gray-100 rounded-full p-1">
+          <button class="soda-qty-btn w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-red-600 font-bold text-xl" onclick="updateSodaQty('aguamaracuya',-1)">−</button>
+          <span id="qty-aguamaracuya" class="w-8 text-center font-bold text-gray-800">0</span>
+          <button class="soda-qty-btn w-9 h-9 bg-red-600 rounded-full shadow-md flex items-center justify-center text-white font-bold text-xl" onclick="updateSodaQty('aguamaracuya',1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Del Valle -->
+    <div class="soda-card combo-card-bg rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-500 to-red-400 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow overflow-hidden">
+            <svg class="soda-bottle" width="28" height="36" viewBox="0 0 40 80" fill="none"><defs><linearGradient id="delvalleG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#EA580C"/><stop offset="50%" stop-color="#FDBA74"/><stop offset="100%" stop-color="#EA580C"/></linearGradient></defs><path d="M16 5L24 5L24 12L26 15L28 25L27 35L29 50L28 65L26 72L14 72L12 65L11 50L13 35L12 25L14 15L16 12Z" fill="url(#delvalleG)"/><rect x="15" y="2" width="10" height="5" rx="1" fill="#C2410C"/><rect x="13" y="28" width="14" height="22" rx="2" fill="#fff"/><text x="20" y="38" text-anchor="middle" fill="#EA580C" font-size="4.5" font-weight="bold">DEL</text><text x="20" y="44" text-anchor="middle" fill="#EA580C" font-size="4.5" font-weight="bold">VALLE</text><ellipse cx="17" cy="57" rx="2" ry="8" fill="rgba(255,255,255,0.4)"/></svg>
+          </div>
+          <div><h3 class="text-white font-bold text-base">Del Valle</h3><p class="text-orange-100 text-xs">250 ml • Jugo natural 🍊</p></div>
+        </div>
+        <span class="text-white font-bold text-lg">$3.000</span>
+      </div>
+      <div class="p-4 flex items-center justify-between">
+        <p class="text-xs text-gray-500">Sabor natural y delicioso</p>
+        <div class="flex items-center gap-2 bg-gray-100 rounded-full p-1">
+          <button class="soda-qty-btn w-9 h-9 bg-white rounded-full shadow-md flex items-center justify-center text-red-600 font-bold text-xl" onclick="updateSodaQty('delvalle',-1)">−</button>
+          <span id="qty-delvalle" class="w-8 text-center font-bold text-gray-800">0</span>
+          <button class="soda-qty-btn w-9 h-9 bg-red-600 rounded-full shadow-md flex items-center justify-center text-white font-bold text-xl" onclick="updateSodaQty('delvalle',1)">+</button>
         </div>
       </div>
     </div>
@@ -436,7 +460,7 @@
   <header class="sticky top-0 z-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 px-4 py-4 shadow-lg">
     <div class="flex items-center justify-between">
       <button id="btn-back-p4" class="bg-white/80 rounded-full p-2 shadow flex items-center gap-1 text-red-700 font-semibold text-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Volver</button>
-      <div class="flex items-center gap-2"><div class="bg-red-600 rounded-xl p-2 shadow-md"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="3" fill="#FEF3C7"/><rect x="6" y="4" width="4" height="12" rx="2" fill="#FBBF24"/><rect x="11" y="2" width="4" height="14" rx="2" fill="#F59E0B"/><rect x="16" y="5" width="4" height="11" rx="2" fill="#FBBF24"/><rect x="21" y="3" width="4" height="13" rx="2" fill="#F59E0B"/></svg></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
+      <div class="flex items-center gap-2"><div class="bg-amber-400 rounded-xl overflow-hidden shadow-md" style="width:44px;height:44px;"><img src="{{ url_for('static', filename='logo.png') }}" alt="Potines" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;"></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
       <div class="bg-white/80 backdrop-blur rounded-full px-3 py-1 shadow"><span class="text-red-600 font-semibold text-sm">Paso 4/6</span></div>
     </div>
   </header>
@@ -477,7 +501,7 @@
   <header class="sticky top-0 z-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 px-4 py-4 shadow-lg">
     <div class="flex items-center justify-between">
       <button id="btn-back-p5" class="bg-white/80 rounded-full p-2 shadow flex items-center gap-1 text-red-700 font-semibold text-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Volver</button>
-      <div class="flex items-center gap-2"><div class="bg-red-600 rounded-xl p-2 shadow-md"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="3" fill="#FEF3C7"/><rect x="6" y="4" width="4" height="12" rx="2" fill="#FBBF24"/><rect x="11" y="2" width="4" height="14" rx="2" fill="#F59E0B"/><rect x="16" y="5" width="4" height="11" rx="2" fill="#FBBF24"/><rect x="21" y="3" width="4" height="13" rx="2" fill="#F59E0B"/></svg></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
+      <div class="flex items-center gap-2"><div class="bg-amber-400 rounded-xl overflow-hidden shadow-md" style="width:44px;height:44px;"><img src="{{ url_for('static', filename='logo.png') }}" alt="Potines" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;"></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
       <div class="bg-white/80 backdrop-blur rounded-full px-3 py-1 shadow"><span class="text-red-600 font-semibold text-sm">Paso 5/6</span></div>
     </div>
   </header>
@@ -541,16 +565,34 @@
       <div class="relative">
         <select id="dom-barrio" class="w-full px-4 py-3 rounded-xl bg-gray-50 text-gray-800 appearance-none cursor-pointer border-2 border-amber-200 focus:border-red-500 focus:outline-none transition-all font-medium">
           <option value="" disabled selected>Selecciona tu barrio</option>
-          <option value="inmaculada">La Inmaculada</option>
-          <option value="la49">La 49</option>
-          <option value="centro">El Centro</option>
-          <option value="margaritas">Las Margaritas</option>
+          <option value="el_cano">El Cano</option>
+          <option value="el_raizal">El Raizal</option>
+          <option value="la_aguacatala">La Aguacatala</option>
+          <option value="la_chuscala">La Chuscala</option>
+          <option value="la_clara">La Clara</option>
+          <option value="la_corrala">La Corrala</option>
+          <option value="la_corralita">La Corralita</option>
+          <option value="la_miel">La Miel</option>
+          <option value="la_quiebra">La Quiebra</option>
+          <option value="la_raya">La Raya</option>
+          <option value="la_salada">La Salada (parte alta y baja)</option>
+          <option value="la_tolva">La Tolva</option>
+          <option value="la_valeria">La Valeria</option>
+          <option value="minuto_de_dios">Minuto de Dios</option>
+          <option value="centro">Centro</option>
           <option value="primavera">Primavera</option>
-          <option value="porvenir">El Porvenir</option>
-          <option value="chuscala">La Chuscala</option>
           <option value="andalucia">Andalucía</option>
-          <option value="corrala">La Corrala</option>
-          <option value="cristorey">Cristo Rey</option>
+          <option value="olaya_herrera">Olaya Herrera</option>
+          <option value="la_loceria">La Locería</option>
+          <option value="felipe_echavarria">Felipe Echavarría (1 y 2)</option>
+          <option value="cristo_rey">Cristo Rey</option>
+          <option value="la_planta">La Planta</option>
+          <option value="la_playita">La Playita</option>
+          <option value="barrios_unidos">Barrios Unidos</option>
+          <option value="el_porvenir">El Porvenir</option>
+          <option value="los_cerezos">Los Cerezos</option>
+          <option value="la_acuarela">La Acuarela</option>
+          <option value="la_rivera">La Rivera</option>
         </select>
         <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"/></svg>
@@ -607,7 +649,7 @@
   <header class="sticky top-0 z-20 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 px-4 py-4 shadow-lg">
     <div class="flex items-center justify-between">
       <button id="btn-back-p6" class="bg-white/80 rounded-full p-2 shadow flex items-center gap-1 text-red-700 font-semibold text-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Volver</button>
-      <div class="flex items-center gap-2"><div class="bg-red-600 rounded-xl p-2 shadow-md"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="3" fill="#FEF3C7"/><rect x="6" y="4" width="4" height="12" rx="2" fill="#FBBF24"/><rect x="11" y="2" width="4" height="14" rx="2" fill="#F59E0B"/><rect x="16" y="5" width="4" height="11" rx="2" fill="#FBBF24"/><rect x="21" y="3" width="4" height="13" rx="2" fill="#F59E0B"/></svg></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
+      <div class="flex items-center gap-2"><div class="bg-amber-400 rounded-xl overflow-hidden shadow-md" style="width:44px;height:44px;"><img src="{{ url_for('static', filename='logo.png') }}" alt="Potines" style="width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;"></div><span class="text-red-700 font-bold text-xl tracking-wide">POTINES</span></div>
       <div class="bg-white/80 backdrop-blur rounded-full px-3 py-1 shadow"><span class="text-red-600 font-semibold text-sm">Paso 6/7</span></div>
     </div>
   </header>
@@ -769,14 +811,14 @@
 // ── STATE ──────────────────────────────────────────────
 const state = {
   selectedCombos: {},
-  sodaQty: { cocacola: 0, sprite: 0, quatro: 0, agua: 0 },
+  sodaQty: { cocacola: 0, quatro: 0, aguamanzana: 0, aguamaracuya: 0, delvalle: 0 },
   totalGeneral: 0,
   numeroOrden: null
 };
-const sodaPrices  = { cocacola: 3000, sprite: 3000, quatro: 3000, agua: 3000 };
+const sodaPrices  = { cocacola: 3000, quatro: 3000, aguamanzana: 3000, aguamaracuya: 3000, delvalle: 3000 };
 const comboPrices = { clasico: 16000, mega: 15000, familiar: 14000, papas: 10000 };
-const sodaNames   = { cocacola: 'Coca-Cola', sprite: 'Sprite', quatro: 'Quatro', agua: 'Agua' };
-const sauceNames  = { casa: 'Salsa de la Casa', enacorradora: 'Salsa Enacorradora', rosada: 'Salsa Rosada', sin_salsa: 'Sin salsa' };
+const sodaNames   = { cocacola: 'Coca-Cola', quatro: 'Cuatro', aguamanzana: 'Agua de Manzana', aguamaracuya: 'Agua de Maracuyá', delvalle: 'Del Valle' };
+const sauceNames  = { rosada: 'Salsa Rosada', enacorradora: 'Salsa Encacorradora', bbq: 'Salsa BBQ', pina: 'Salsa de Piña', sin_salsa: 'Sin salsa' };
 const comboData   = {
   clasico:  { name: 'COMBO 1', desc: 'Papas, 1 snack de pollo, 1 bombón, salchicha y huevo' },
   mega:     { name: 'COMBO 2', desc: '3 snacks de pollo, 2 huevos, papas y salchicha' },
@@ -788,12 +830,14 @@ const gradientMap = {
   familiar: 'from-orange-500 to-red-500', papas: 'from-yellow-400 to-amber-400',
 };
 const sauces = [
-  { value:'casa',         name:'Salsa de la Casa',   desc:'Cremosa y especiada',   iconBg:'from-amber-100 to-orange-100',
-    svg:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="20" rx="10" ry="6" fill="#92400E"/><ellipse cx="14" cy="19" rx="8" ry="4" fill="#D97706"/><circle cx="14" cy="12" r="6" fill="#F59E0B"/><circle cx="12" cy="11" r="1.5" fill="#FCD34D"/></svg>` },
-  { value:'enacorradora', name:'Salsa Enacorradora', desc:'Picante y atrevida 🔥', iconBg:'from-red-100 to-orange-100',
-    svg:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="20" rx="10" ry="6" fill="#991B1B"/><ellipse cx="14" cy="19" rx="8" ry="4" fill="#DC2626"/><circle cx="14" cy="12" r="6" fill="#EF4444"/><path d="M11 10 L14 7 L17 10" stroke="#FCA5A5" stroke-width="2" stroke-linecap="round"/></svg>` },
-  { value:'rosada',       name:'Salsa Rosada',       desc:'Suave y deliciosa',      iconBg:'from-pink-100 to-red-100',
+  { value:'rosada',       name:'Salsa Rosada',        desc:'Suave y deliciosa',      iconBg:'from-pink-100 to-red-100',
     svg:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="20" rx="10" ry="6" fill="#9D174D"/><ellipse cx="14" cy="19" rx="8" ry="4" fill="#EC4899"/><circle cx="14" cy="12" r="6" fill="#F9A8D4"/><circle cx="12" cy="11" r="1" fill="#FDF2F8"/><circle cx="16" cy="13" r="0.8" fill="#FDF2F8"/></svg>` },
+  { value:'enacorradora', name:'Salsa Encacorradora',  desc:'Suave y estiluda ✨', iconBg:'from-red-100 to-orange-100',
+    svg:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="20" rx="10" ry="6" fill="#991B1B"/><ellipse cx="14" cy="19" rx="8" ry="4" fill="#DC2626"/><circle cx="14" cy="12" r="6" fill="#EF4444"/><path d="M11 10 L14 7 L17 10" stroke="#FCA5A5" stroke-width="2" stroke-linecap="round"/></svg>` },
+  { value:'bbq',          name:'Salsa BBQ',            desc:'Ahumada y dulce 🍖',    iconBg:'from-amber-100 to-yellow-100',
+    svg:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="20" rx="10" ry="6" fill="#78350F"/><ellipse cx="14" cy="19" rx="8" ry="4" fill="#B45309"/><circle cx="14" cy="12" r="6" fill="#D97706"/><circle cx="12" cy="11" r="1.5" fill="#FDE68A"/></svg>` },
+  { value:'pina',         name:'Salsa de Piña',        desc:'Dulce y tropical 🍍',   iconBg:'from-yellow-100 to-lime-100',
+    svg:`<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><ellipse cx="14" cy="20" rx="10" ry="6" fill="#713F12"/><ellipse cx="14" cy="19" rx="8" ry="4" fill="#CA8A04"/><circle cx="14" cy="12" r="6" fill="#FDE047"/><circle cx="12" cy="11" r="1.5" fill="#FEF9C3"/></svg>` },
 ];
 
 // ── NAV ────────────────────────────────────────────────
@@ -1142,7 +1186,7 @@ document.getElementById('whatsapp-btn').addEventListener('click', function () {
 
 function reiniciarPedido() {
   state.selectedCombos = {};
-  state.sodaQty = { cocacola: 0, sprite: 0, quatro: 0, agua: 0 };
+  state.sodaQty = { cocacola: 0, quatro: 0, aguamanzana: 0, aguamaracuya: 0, delvalle: 0 };
   state.totalGeneral = 0;
   state.numeroOrden = null;
   document.querySelectorAll('.combo-item').forEach(card => {
@@ -1150,7 +1194,7 @@ function reiniciarPedido() {
     card.querySelector('.qty-controls').classList.replace('flex','hidden');
   });
   document.querySelectorAll('.qty-value').forEach(el => el.textContent = '1');
-  ['cocacola','sprite','quatro','agua'].forEach(p => {
+  ['cocacola','quatro','aguamanzana','aguamaracuya','delvalle'].forEach(p => {
     document.getElementById('qty-' + p).textContent = '0';
   });
   document.getElementById('soda-total-banner').classList.add('hidden');
