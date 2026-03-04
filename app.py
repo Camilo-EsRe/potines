@@ -48,7 +48,8 @@ def enviar_pedido():
 
     total_combos  = sum(COMBO_PRICES.get(k,0)*v for k,v in combos.items() if v>0)
     total_bebidas = sum(SODA_PRICES.get(k,0)*v  for k,v in bebidas.items() if v>0)
-    total_general = total_combos + total_bebidas + COSTO_DOMICILIO
+    costo_domicilio = datos.get('costo_domicilio', 0)
+    total_general = total_combos + total_bebidas + costo_domicilio
 
     # Resumen de texto
     lineas = [f"🍟 NUEVO PEDIDO POTINES 🍟","="*40,f"📋 ORDEN: {numero_orden}","="*40,"","📦 COMBOS:"]
@@ -72,7 +73,7 @@ def enviar_pedido():
         f"  Referencia: {domicilio.get('referencia','—') or '—'}",
         "","="*40,
         f"  Subtotal productos: ${total_combos+total_bebidas:,}",
-        f"  Domicilio:          ${COSTO_DOMICILIO:,}",
+        f"  Domicilio:          ${costo_domicilio:,}",
         f"💰 TOTAL A COBRAR:    ${total_general:,}",
         "="*40]
     resumen_texto = "\n".join(lineas)
