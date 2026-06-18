@@ -9,7 +9,7 @@ app = Flask(__name__)
 # CONFIGURACIÓN  ← edita solo esta sección
 # ══════════════════════════════════════════════════════════
 GMAIL_REMITENTE     = "potinesdomiclios@gmail.com"
-GMAIL_PASSWORD      = "cssh uvlx jgrc daki"
+GMAIL_PASSWORD      = "srzn fcmf xnsr bdip"
 CORREO_DESPACHADORA = "potinesdomiclios@gmail.com"
 
 # TARIFAS INTERNAS DE ENVÍO (Protegidas en Backend)
@@ -232,7 +232,9 @@ def enviar_pedido():
         _enviar_correo(numero_orden, resumen_texto, domicilio, total_general)
         correo_ok = True
     except Exception as e:
-        print(f"❌ Error correo: {e}")
+        import traceback
+        print("🚨 DETALLE DEL ERROR DE CORREO:")
+        traceback.print_exc()  # <--- Esto te dirá la línea exacta y la respuesta de Google
         correo_ok = False
 
 

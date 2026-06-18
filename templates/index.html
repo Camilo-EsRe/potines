@@ -1884,23 +1884,57 @@ document.getElementById('copy-llave-btn').addEventListener('click', function () 
   });
 });
 
-// WhatsApp efectivo
-document.getElementById('whatsapp-efectivo-btn').addEventListener('click', function () {
-  const total = document.getElementById('p5-total-efectivo').textContent;
+// ── FUNCIÓN COMPARTIDA: envía el pedido al backend ──────
+async function enviarPedidoAlBackend() {
+  const salsasResult = {};
+  document.querySelectorAll('#sauce-combos-container input:checked').forEach(input => {
+    if (!salsasResult[input.name]) salsasResult[input.name] = [];
+    salsasResult[input.name].push(input.value);
+  });
+
+  const payload = {
+    combos:    state.selectedCombos,
+    salsas:    salsasResult,
+    bebidas:   state.sodaQty,
+    adiciones: adiciones,
+    domicilio: state.domicilio
+  };
+
+  try {
+    const res = await fetch('/enviar-pedido', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    // Guardamos el número de orden que genera el backend
+    state.numeroOrden = data.numero_orden;
+    return data;
+  } catch (err) {
+    console.error('Error al enviar pedido:', err);
+    return null;
+  }
+}
+
+// ── WhatsApp EFECTIVO ────────────────────────────────────
+document.getElementById('whatsapp-efectivo-btn').addEventListener('click', async function () {
+  const data = await enviarPedidoAlBackend();          // 1. Envía correo
+  const total    = document.getElementById('p5-total-efectivo').textContent;
   const orderNum = state.numeroOrden || ('#' + String(Math.floor(Math.random()*99999)+1).padStart(6,'0'));
   const msg = encodeURIComponent(`¡Hola POTINES! 🍟\nQuiero confirmar mi pedido en EFECTIVO por un valor de ${total}.\nMi número de orden es: ${orderNum}\n¡Gracias!`);
-  window.open(`https://wa.me/573127819820?text=${msg}`, '_blank');
+  window.open(`https://wa.me/573127819820?text=${msg}`, '_blank'); // 2. Abre WhatsApp
   document.getElementById('order-number-display').textContent = orderNum;
   goToPhase(7);
 });
 
-// WhatsApp transferencia
-document.getElementById('whatsapp-btn').addEventListener('click', function () {
-  const num = document.getElementById('account-number').textContent;
+// ── WhatsApp TRANSFERENCIA ───────────────────────────────
+document.getElementById('whatsapp-btn').addEventListener('click', async function () {
+  const data = await enviarPedidoAlBackend();          // 1. Envía correo
+  const num   = document.getElementById('account-number').textContent;
   const total = document.getElementById('p5-total').textContent;
   const orderNum = state.numeroOrden || ('#' + String(Math.floor(Math.random()*99999)+1).padStart(6,'0'));
   const msg = encodeURIComponent(`¡Hola POTINES! 🍟\nAcabo de realizar una transferencia de ${total} a la cuenta ${num}.\nMi número de orden es: ${orderNum}\nAdjunto mi comprobante de pago. ¡Gracias!`);
-  window.open(`https://wa.me/573127819820?text=${msg}`, '_blank');
+  window.open(`https://wa.me/573127819820?text=${msg}`, '_blank'); // 2. Abre WhatsApp
   document.getElementById('order-number-display').textContent = orderNum;
   goToPhase(7);
 });
@@ -1941,7 +1975,11 @@ document.getElementById('dom-barrio').addEventListener('change', function() {
   const selected = this.options[this.selectedIndex];
   const precio = parseInt(selected.getAttribute('data-domicilio') || '0');
   const texto = precio > 0 ? `$${precio.toLocaleString('es-CO')} · domicilio` : 'Selecciona tu barrio';
-  document.getElementById('domicilio-precio-texto').textContent = texto;
+  const precioTexto = document.getElementById('domicilio-precio-texto');
+
+if (precioTexto) {
+    precioTexto.textContent = texto;
+}
   state.costoDomicilio = precio;
 });
 
@@ -1991,11 +2029,11 @@ document.addEventListener('click', function reproducirAudio() {
     document.removeEventListener('click', reproducirAudio);
 }, { once: true });
 </script>
-</body>
 <div class="flag-left">🇨🇴</div>
 <div class="flag-right">🇨🇴</div>
 
 <div class="worldcup-banner">
     ⚽ Apoyando a Colombia en el Mundial 2026 🇨🇴
 </div>
+</body>
 </html>
